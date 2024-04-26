@@ -127,7 +127,7 @@ include 'components/wishlist_cart.php';
    </div>
    <div class="swiper-button-prev"><i class="fa-solid fa-arrow-left"></i></div> 
  <div class="swiper-button-next"><i class="fa-solid fa-arrow-right"></i> </div> 
-   <!-- <button type='button' id="popbtn" ><p class='icon_num'>1</p><i class="fa-solid fa-sliders"><span>Filter</span></i></button>  -->
+   <button type='button' id="popbtn" ><p class='icon_num'>1</p><i class="fa-solid fa-sliders"><span>Filter</span></i></button> 
 
 <div class="container" id="data"></div>
 
