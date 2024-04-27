@@ -24,7 +24,7 @@
 <header class="header" >
 
    <section class="flex" >
-   <button type='button'><a href="home.php" class="logo">Tourify<span>.</span></a></button> 
+   <button type='button'><a href="home.php" class="logo">Super Home<span>.</span></a></button> 
       
 
       <nav class="navbar">
@@ -44,7 +44,7 @@
             $total_cart_counts = $count_cart_items->rowCount();
          ?>
          <div id="menu-btn" class="fas fa-bars"></div>
-         <a href="seller/seller_login.php" target="_blank"><i class="fa-solid fa-user-tie"></i>Switch to Hosting</a>
+         <!-- <a href="seller/seller_login.php" target="_blank"></a> -->
          
          <a href="wishlist.php"><i class="fas fa-heart"></i><span>(<?= $total_wishlist_counts; ?>)</span></a>
          <div id="user-btn" class="fas fa-user"></div>

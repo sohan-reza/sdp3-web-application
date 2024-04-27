@@ -67,67 +67,70 @@ include 'components/wishlist_cart.php';
   
    <div class="swiper-wrapper">
    
-   <a href="#" onload='trigger()' onClick="update_1()" id="one"  class="swiper-slide slide">
+   <!-- <a href=""  onClick="update_1()" id="one"  class="swiper-slide slide">
    
       <h3><i class="fa-solid fa-bed fa-2xl"><p class='icon_select1'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Room</span></i></h3>
-   </a>
+   </a> -->
 
-   <a href="#" class="swiper-slide slide"onClick="update_2()"  id="two">
+   <a href="#" onload='trigger()' class="swiper-slide slide"onClick="update_2()"  id="two">
    
-      <h3><i class="fa-solid fa-umbrella-beach fa-2xl"><p class='icon_select2'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Beach</span></i></h3>
+      <h3><i class="fa-solid fa-xl">1 Day<span>1 Day</span></i></h3>
    </a>
 
    <a href="#" class="swiper-slide slide" onClick="update_3()"  id="three">
       
-      <h3><i class="fa-solid fa-city fa-2xl"><p class='icon_select3'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>City</span></i> </h3>
+   <h3><i class="fa-solid fa-xl">3 Day<span>3 Day</span></i></h3>
+   
    </a>
 
    <a href="#" class="swiper-slide slide" onClick="update_4()"  id="four">
       
-      <h3><i class="fa-solid fa-tents fa-2xl"><p class='icon_select4'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Camping</span></i></h3>
+   <h3><i class="fa-solid fa-xl">5 Day<span>5 Day</span></i></h3>
    </a>
 
    <a href="#" class="swiper-slide slide" onClick="update_5()"  id="five">
       
-      <h3><i class="fa-solid fa-mountain-sun fa-2xl"><p class='icon_select5'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Hill</span></i></h3>
+   <h3><i class="fa-solid fa-xl">7 Day<span>7 Day</span></i></h3>
    </a>
 
    <a href="#" class="swiper-slide slide" onClick="update_6()"  id="six">
       
-      <h3><i class="fa-solid fa-tree fa-2xl"><p class='icon_select6'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Forest</span></i> </h3>
+   <h3><i class="fa-solid fa-xl">15 Day<span>15 Day</span></i></h3>
+   
    </a>
 
-   <a href="#" class="swiper-slide slide" onClick="update_7()"  id="seven">
+    <a href="" class="swiper-slide slide" onClick="update_7()"  id="seven">
       
-      <h3><i class="fa-solid fa-ship fa-2xl"><p class='icon_select7'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Boat</span></i> </h3>
+    <h3><i class="fa-solid fa-xl"> Month<span>1 Month</span></i></h3>
+   
    </a>
 
-   <a href="#" class="swiper-slide slide" onClick="update_8()"  id="eight">
+   <!--<a href="" class="swiper-slide slide" onClick="update_8()"  id="eight">
      
       <h3> <i class="fa-solid fa-chess-rook fa-2xl"><p class='icon_select8'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Castle</span></i></h3>
    </a>
 
-   <a href="#" class="swiper-slide slide" onClick="update_9()"  id="nine">
+   <a href="" class="swiper-slide slide" onClick="update_9()"  id="nine">
       
       <h3><i class="fa-solid fa-golf-ball-tee fa-2xl"><p class='icon_select9'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Golf</span></i> </h3>
    </a>
 
-   <a href="#" class="swiper-slide slide" onClick="update_10()"  id="ten">
+   <a href="" class="swiper-slide slide" onClick="update_10()"  id="ten">
      
       <h3> <i class="fa-solid fa-house fa-2xl"><p class='icon_select10'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Apartment</span></i></h3>
    </a>
 
-   <a href="#" class="swiper-slide slide" onClick="update_11()"  id="eleven">
+   <a href="" class="swiper-slide slide" onClick="update_11()"  id="eleven">
      
       <h3> <i class="fa-solid fa-gopuram fa-2xl"><p class='icon_select11'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Tower</span></i> </h3>
-   </a>
+   </a> -->
    
    </div>
  
    </div>
-   <div class="swiper-button-prev"><i class="fa-solid fa-arrow-left"></i></div>
+   <!-- <div class="swiper-button-prev"><i class="fa-solid fa-arrow-left"></i></div>
 <div class="swiper-button-next"><i class="fa-solid fa-arrow-right"></i> </div>
-   <button type='button' id="popbtn" ><p class='icon_num'>1</p><i class="fa-solid fa-sliders"><span>Filter</span></i></button>
+   <button type='button' id="popbtn" ><p class='icon_num'>1</p><i class="fa-solid fa-sliders"><span>Filter</span></i></button> -->
 
 <div class="container" id="data"></div>
 
@@ -306,16 +309,16 @@ const ten = document.getElementById("ten");
 const eleven = document.getElementById("eleven");
 
 function trigger(){
-   document.getElementById("one").click();
+   document.getElementById("two").click();
 }
 
 window.addEventListener('load', function () {
-  document.getElementById("one").click();})
+  document.getElementById("two").click();})
 
  
 
 
-var categoryselect='room';
+var categoryselect='beach';
 
 function update_1() {
   reset();
@@ -328,37 +331,37 @@ function update_1() {
 function update_2() {
   reset();
   $('.icon_select2').css('display', 'flex');
-  $('#category_name').html('Beach');
+  $('#category_name').html('1 Day');
   categoryselect='beach';
  }
  function update_3() {
   reset();
   $('.icon_select3').css('display', 'flex');
-  $('#category_name').html('City');
+  $('#category_name').html('3 Day');
   categoryselect='city';
  }
  function update_4() {
   reset();
   $('.icon_select4').css('display', 'flex');
-  $('#category_name').html('Camping');
+  $('#category_name').html('5 Day');
   categoryselect='camping';
  }
  function update_5() {
   reset();
   $('.icon_select5').css('display', 'flex');
-  $('#category_name').html('Hill');
+  $('#category_name').html('7 Day');
   categoryselect='hill';
  }
  function update_6() {
   reset();
   $('.icon_select6').css('display', 'flex');
-  $('#category_name').html('Forest');
+  $('#category_name').html('15 Day');
   categoryselect='forest';
  }
  function update_7() {
   reset();
   $('.icon_select7').css('display', 'flex');
-  $('#category_name').html('Boat');
+  $('#category_name').html('1 Month');
   categoryselect='boat';
  }
  function update_8() {
@@ -417,116 +420,118 @@ let flag=0;
                   
          const limit=10;
          let start =0;
-         function load_data_ajax(limit,start,categoryselect){
-   
-            $.ajax({
-               url: 'fetch_data.php',
-               type:'get',
-               data : {
-                  limit:limit,
-                  start:start,
-                  categoryselect:categoryselect
-               },
-               
-               dataType:'json',
-               success:function(result){
-                  if(result.status==1)
-                  {
-                     document.getElementById("btn-load-more").disabled = false;
-                     document.querySelector('#btn-load-more').textContent='Load More';
-                     document.getElementById("btn-load-more").style.cursor = "pointer";
-                     const data=result.data;
-                     let html='';
-                     $.each(data,function(index,product){
-                        
-                        html+=`
-                        <section class='products' ">
-                           <div class="box-container">
-                                 <div class="box" >
-                        <form action=""  method="post" >
-                              <input type="hidden" name="pid" value="${product['id']}">
-                              <input type="hidden" name="name" value="${product['name']}">
-                              <input type="hidden" name="city" value="${product['city']}">
-                              <input type="hidden" name="country" value="${product['country']}">
-                              <input type="hidden" name="price" value="${product['price']}">
-                              <input type="hidden" name="image" value="${product['image_01']}">
-                              <input type="hidden" name="seller" value="${product['seller']}">
-                              <input type="hidden" name="seller_id" value="${product['seller_id']}">
-                             
+         function load_data_ajax(limit, start, categoryselect) {
+    $.ajax({
+        url: 'fetch_data.php',
+        type: 'get',
+        data: {
+            limit: limit,
+            start: start,
+            categoryselect: categoryselect
+        },
+        dataType: 'json',
+        success: function (result) {
+            if (result.status == 1) {
+
+                document.getElementById("btn-load-more").disabled = false;
+                document.querySelector('#btn-load-more').textContent = 'Load More';
+                document.getElementById("btn-load-more").style.cursor = "pointer";
+                const data = result.data;
+                let html = '';
+                $.each(data, function (index, product) {
+
+                    html += `
+                    <section class='products' ">
+                       <div class="box-container">
+                             <div class="box" >
+                    <form action=""  method="post" >
+                          <input type="hidden" name="pid" value="${product['id']}">
+                          <input type="hidden" name="name" value="${product['name']}">
+                          <input type="hidden" name="city" value="${product['city']}">
+                          <input type="hidden" name="country" value="${product['country']}">
+                          <input type="hidden" name="price" value="${product['price']}">
+                          <input type="hidden" name="image" value="${product['image_01']}">
+                          <input type="hidden" name="seller" value="${product['seller']}">
+                          <input type="hidden" name="seller_id" value="${product['seller_id']}">
+                         
+                          
+                          <swiper-container class="mySwiper" pagination='true' pagination-clickable='true'style="--swiper-pagination-color: white;--swiper-pagination-bullet-size: 5px; --swiper-pagination-bullet-horizontal-gap: 3px;" >
+
+                         
+                                <swiper-slide>
+                                <a href="quick_view.php?pid=${product['id']} " target="_blank">
+                                   <img src="uploaded_img/${product['image_01']}  "  alt="">
+                                   <button id='wish' class="fa-regular fa-heart" type="submit" name="add_to_wishlist"></button>
+                                </a>
+                                </swiper-slide>
+                                
+                                
+                                <swiper-slide>
+                                <a href="quick_view.php?pid=${product['id']} "target="_blank" >
+                                   <img src="uploaded_img/${product['image_02']}  "  alt="">
+                                   <button id='wish' class="fa-regular fa-heart" type="submit" name="add_to_wishlist"></button>
+                                </a>
+                                </swiper-slide>
+                                <swiper-slide>
+                                <a href="quick_view.php?pid=${product['id']} " target="_blank">
+                                   <img src="uploaded_img/${product['image_03']}  "  alt="">
+                                   <button id='wish' class="fa-regular fa-heart" type="submit" name="add_to_wishlist"></button>
+                                </a>
+                                </swiper-slide>
+                          </swiper-container >
+                          <a href="quick_view.php?pid=${product['id']} "target="_blank" >
+                          <div class="name"><b>${product['city']}, ${product['country']} </b></div>
+                             <div class="flex">
+                             <div class="card">
+                                <div class="flex-btn title">
+                                <span class='date-title'>Place</span>
+                                <span class='price-title'>Per Night</span>
+                                </div>    
+
+                                <div class="flex-btn ">
+                                <p class="grid-item date"><span id='checkin'>${product['name']}</span></p>
+                                <p class="grid-item price"><span id='price'>$${product['price']}</span><span></span></p>
+                             </div>
+                              </div>                           
+                             </a>
                               
-                              <swiper-container class="mySwiper" pagination='true' pagination-clickable='true'style="--swiper-pagination-color: white;--swiper-pagination-bullet-size: 5px; --swiper-pagination-bullet-horizontal-gap: 3px;" >
 
-                             
-                                    <swiper-slide>
-                                    <a href="quick_view.php?pid=${product['id']} " target="_blank">
-                                       <img src="uploaded_img/${product['image_01']}  "  alt="">
-                                       <button id='wish' class="fa-regular fa-heart" type="submit" name="add_to_wishlist"></button>
-                                    </a>
-                                    </swiper-slide>
-                                    
-                                    
-                                    <swiper-slide>
-                                    <a href="quick_view.php?pid=${product['id']} "target="_blank" >
-                                       <img src="uploaded_img/${product['image_02']}  "  alt="">
-                                       <button id='wish' class="fa-regular fa-heart" type="submit" name="add_to_wishlist"></button>
-                                    </a>
-                                    </swiper-slide>
-                                    <swiper-slide>
-                                    <a href="quick_view.php?pid=${product['id']} " target="_blank">
-                                       <img src="uploaded_img/${product['image_03']}  "  alt="">
-                                       <button id='wish' class="fa-regular fa-heart" type="submit" name="add_to_wishlist"></button>
-                                    </a>
-                                    </swiper-slide>
-                              </swiper-container >
-                              <a href="quick_view.php?pid=${product['id']} "target="_blank" >
-                              <div class="name"><b>${product['city']}, ${product['country']} </b></div>
-                                 <div class="flex">
-                                 <div class="card">
-                                    <div class="flex-btn title">
-                                    <span class='date-title'>Place</span>
-                                    <span class='price-title'>Per Night</span>
-                                    </div>    
+         
 
-                                    <div class="flex-btn ">
-                                    <p class="grid-item date"><span id='checkin'>${product['name']}</span></p>
-                                    <p class="grid-item price"><span id='price'>$${product['price']}</span><span></span></p>
-                                 </div>
-                                  </div>                           
-                                 </a>
-                                  
-                 
-                       
+      </div>
 
-              </div>
-
-                              </div>
-                         </form>
-                           </div>
-                           </div>
-                             
-                        </section>
-                        `;
+                          </div>
+                     </form>
+                       </div>
+                       </div>
+                         
+                    </section>
+                    `;
 
 
-                     });
-                    if(start==0)
-                    {
-                     $('#load-data').html(html);
-                    }
-                    else
-                    {
-                     $('#load-data').append(html);
-                    }
-                  }
-                  else{
-                  
-                     document.querySelector('#btn-load-more').textContent='No more results';
-                     document.getElementById("btn-load-more").style.cursor = "no-drop";
-                     document.getElementById("btn-load-more").disabled = true;
-                  }
-               }
-            })
-         }
+                });
+                if (start == 0) {
+                    $('#load-data').html(html);
+                } else {
+                    $('#load-data').append(html);
+                }
+            } else {
+
+                document.querySelector('#btn-load-more').textContent = 'No more results';
+                document.getElementById("btn-load-more").style.cursor = "no-drop";
+                document.getElementById("btn-load-more").disabled = true;
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("Error:", error);
+            //console.error("Status:", status);
+            console.error("Response:", xhr.responseText);
+            // You can log errors to the console or send them to a logging service
+            // for more detailed error handling
+        }
+    });
+}
+
 
 
          $("#btn-load-more").click(function(){
@@ -554,7 +559,6 @@ let flag=0;
 
             categoryselect='room';
                
-
             if(flag==0)
                {
                load_data_ajax(limit,start,categoryselect);
