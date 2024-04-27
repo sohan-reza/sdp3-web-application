@@ -24,14 +24,14 @@
 <header class="header" >
 
    <section class="flex" >
-   <button type='button'><a href="home.php" class="logo">Super Home<span>.</span></a></button> 
+   <button type='button'><a href="index.php" class="logo">Super Home<span>.</span></a></button> 
       
-
+      <center>
       <nav class="navbar">
       <a href="search_page.php">
-      <button type='button'><i class="fas fa-search"><span>Search</span></i></button> </a>
+      <button type='button' style="margin-right: 334px;"><i class="fas fa-search"><span>Search</span></i></button> </a>
       
-      </nav>
+      </nav></center>
 
       <div class="icons">
          <?php
@@ -83,3 +83,7 @@
    </section>
 
 </header>
+
+<style>
+   
+</style>

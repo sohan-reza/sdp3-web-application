@@ -20,7 +20,7 @@ include 'components/wishlist_cart.php';
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>home</title>
+   <title>Super Home</title>
 
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
    
@@ -30,7 +30,8 @@ include 'components/wishlist_cart.php';
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
-   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
@@ -39,39 +40,126 @@ include 'components/wishlist_cart.php';
    
 <?php include 'components/user_header.php'; ?>
 
-<!--
-<section class="place">
-    <form class="dropdown-group align-items-center">
-      <select class="country" id='country'size="1" onchange="loadStates();countryselect(this); ">
-        <option value="" selected="selected">-- Select Country --</option>
-      </select>
 
-      <select class="state" id='state' size="1" onchange="loadCities();">
-        <option value="" selected="selected">-- Select State --</option>
-      </select>
 
-      <select class="city" id='city' size="1" onchange="">
-        <option value="" selected="selected" >-- Select City --</option>
-      </select>
-
-    </form>
+<section class="welcome-section">
+   <div class="welcome-content">
+      <h1>Hello!</h1>
+      <p>Welcome to Super Home.</p>
+   </div>
 </section>
--->
 
+<style>
+   .welcome-section {
+   background-image: url('uploaded_img/background.png'); /* Add the path to your background image */
+   background-size: cover;
+   background-position: center;
+   height: 100vh; /* Adjust the height as needed */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white; /* Text color */
+}
+
+.welcome-content {
+   max-width: 600px; /* Adjust the width as needed */
+   padding: 20px;
+   font-size: 20px;
+   
+   background: #e9e9ed;
+}
+
+.welcome-content h1 {
+   font-size: 3em; /* Adjust the font size as needed */
+   
+}
+
+.welcome-content p {
+   font-size: 1.5em; /* Adjust the font size as needed */
+   margin-top: 10px; /* Add spacing between heading and paragraph */
+   color: black;
+}
+
+</style>
+
+<section class="facilities-section">
+   <h2 class="section-heading">Facilities</h2>
+   <div class="facility">
+      <img src="uploaded_img/no-image.svg" alt="Bed Image">
+      <p>Personal Bed</p>
+   </div>
+   <div class="facility">
+      <img src="uploaded_img/no-image.svg" alt="Locker Image">
+      <p>Locker</p>
+   </div>
+   <div class="facility">
+      <img src="uploaded_img/no-image.svg" alt="Reading Room Image">
+      <p>Reading Room</p>
+   </div>
+   <div class="facility">
+      <img src="uploaded_img/no-image.svg" alt="Meal Image">
+      <p>Meal</p>
+   </div>
+   <div class="facility">
+      <img src="uploaded_img/no-image.svg" alt="Playing Ground Image">
+      <p>Playing Ground</p>
+   </div>
+   <div class="facility">
+      <img src="uploaded_img/no-image.svg" alt="Gym Image">
+      <p>GYM</p>
+   </div>
+</section>
+
+<section class="special-packages" style="background: green;margin-bottom: 15px;">
+   <h2 class="section-heading">Explore our Special and Comfortable Packages</h2>
+   <div class="package-description">
+      <p>Experience luxury and comfort like never before with our special packages tailored just for you. Whether you're planning a romantic getaway, a family vacation, or a solo adventure, we have the perfect package to suit your needs. Indulge in exquisite amenities, breathtaking views, and exceptional service as you create memories to last a lifetime.</p>
+   </div>
+</section>
+
+
+
+<style>
+   .special-packages {
+   text-align: center; /* Center-align the content */
+   padding: 50px 0; /* Add padding to the top and bottom */
+   font-size: 20px;
+}
+
+.section-heading {
+   font-size: 2.5em; /* Increase font size for heading */
+   margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.package-description {
+   max-width: 800px; /* Limit the width of the description */
+   margin: 0 auto; /* Center the description */
+   line-height: 1.6; /* Increase line height for better readability */
+}
+
+.package-description p {
+   margin-bottom: 20px; /* Add some space below each paragraph */
+}
+
+.package-description p:last-child {
+   margin-bottom: 0; /* Remove space below the last paragraph */
+}
+
+</style>
+
+<h2 class="section-heading">Day-Based Packages</h2>
+<div class="all_container">
          
 <section class="category">
 
-
+   
 
    <div class="swiper category-slider">
   
    <div class="swiper-wrapper">
    
-   <!-- <a href=""  onClick="update_1()" id="one"  class="swiper-slide slide">
    
-      <h3><i class="fa-solid fa-bed fa-2xl"><p class='icon_select1'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Room</span></i></h3>
-   </a> -->
-
    <a href="#" onload='trigger()' class="swiper-slide slide"onClick="update_2()"  id="two">
    
       <h3><i class="fa-solid fa-xl">1 Day<span>1 Day</span></i></h3>
@@ -105,33 +193,12 @@ include 'components/wishlist_cart.php';
    
    </a>
 
-   <!--<a href="" class="swiper-slide slide" onClick="update_8()"  id="eight">
-     
-      <h3> <i class="fa-solid fa-chess-rook fa-2xl"><p class='icon_select8'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Castle</span></i></h3>
-   </a>
-
-   <a href="" class="swiper-slide slide" onClick="update_9()"  id="nine">
-      
-      <h3><i class="fa-solid fa-golf-ball-tee fa-2xl"><p class='icon_select9'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Golf</span></i> </h3>
-   </a>
-
-   <a href="" class="swiper-slide slide" onClick="update_10()"  id="ten">
-     
-      <h3> <i class="fa-solid fa-house fa-2xl"><p class='icon_select10'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Apartment</span></i></h3>
-   </a>
-
-   <a href="" class="swiper-slide slide" onClick="update_11()"  id="eleven">
-     
-      <h3> <i class="fa-solid fa-gopuram fa-2xl"><p class='icon_select11'><i class="fa-solid fa-check" style="color: #ffffff;"></i></p><span>Tower</span></i> </h3>
-   </a> -->
+   
    
    </div>
  
    </div>
-   <!-- <div class="swiper-button-prev"><i class="fa-solid fa-arrow-left"></i></div>
-<div class="swiper-button-next"><i class="fa-solid fa-arrow-right"></i> </div>
-   <button type='button' id="popbtn" ><p class='icon_num'>1</p><i class="fa-solid fa-sliders"><span>Filter</span></i></button> -->
-
+   
 <div class="container" id="data"></div>
 
 </section>
@@ -143,6 +210,54 @@ include 'components/wishlist_cart.php';
 </div>
 
 
+<style>
+.section-heading {
+   text-align: center;
+   font-size: 24px;
+   margin-bottom: 20px;
+   position: relative;
+}
+
+.section-heading::after {
+   content: "";
+   display: block;
+   width: 60px; /* Adjust the width of the underline as needed */
+   height: 2px; /* Adjust the height of the underline as needed */
+   background-color: #000; /* Adjust the color of the underline as needed */
+   position: absolute;
+   bottom: -10px; /* Adjust the distance of the underline from the text as needed */
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+
+.facilities-section {
+   text-align: center; /* Align the facilities in the center */
+}
+
+.facility {
+   display: inline-block; /* Display the facilities in a row */
+   vertical-align: top; /* Align the elements to the top */
+   width: 200px; /* Set a fixed width for each facility */
+   margin: 0 20px; /* Add some spacing between the facilities */
+   text-align: center; /* Center align the content within each facility */
+   margin-bottom: 25px;
+}
+
+.facility img {
+   width: 150px; /* Adjust image size as needed */
+   height: 150px; /* Adjust image size as needed */
+   object-fit: cover;
+   border-radius: 50%; /* Makes the image round */
+   margin-bottom: 10px;
+}
+
+.facility p {
+   font-size: 15px;
+}
+
+
+</style>
 
 
 
@@ -244,7 +359,7 @@ include 'components/wishlist_cart.php';
 				<p></p>
 			</section>
 		</article>
-
+   </div>
       <script>
 	       let X = document.getElementById('popbtn');
 	let modal = document.getElementById('modal-container');
