@@ -221,17 +221,17 @@ if(isset($_GET['delete'])){
           
                <select name="category"   required> 
                <option value="">Select</option>
-               <option value="room">room</option>
-               <option value="beach">beach</option>
-               <option value="city">city</option>
-               <option value="camping">camping</option>
-               <option value="hill">hill</option>
-               <option value="forest">forest</option>
-               <option value="boat">boat</option>
-               <option value="castle">castle</option>
+               <!-- <option value="room">1 Day</option> -->
+               <option value="beach">1 Day</option>
+               <option value="city">3 Day</option>
+               <option value="camping">5 Day</option>
+               <option value="hill">7 Day</option>
+               <option value="forest">15 Month</option>
+               <option value="boat">1 Month</option>
+               <!-- <option value="castle">castle</option>
                <option value="golf">golf</option>
                <option value="apartment">apartment</option>
-               <option value="tower">tower</option>
+               <option value="tower">tower</option> -->
                </select>
          </div>
             

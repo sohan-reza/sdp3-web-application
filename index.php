@@ -600,12 +600,12 @@ let flag=0;
                              <div class="card">
                                 <div class="flex-btn title">
                                 <span class='date-title'>Place</span>
-                                <span class='price-title'>Per Night</span>
+                                <span class='price-title'>Per 1 Day</span>
                                 </div>    
 
                                 <div class="flex-btn ">
                                 <p class="grid-item date"><span id='checkin'>${product['name']}</span></p>
-                                <p class="grid-item price"><span id='price'>$${product['price']}</span><span></span></p>
+                                <p class="grid-item price"><span id='price'>TK ${product['price']}</span><span></span></p>
                              </div>
                               </div>                           
                              </a>
@@ -935,12 +935,12 @@ let flag=0;
                                  <div class="card">
                                     <div class="flex-btn title">
                                     <span class='date-title'>Place</span>
-                                    <span class='price-title'>Per Night</span>
+                                    <span class='price-title'>Per 1 Day</span>
                                     </div>    
 
                                     <div class="flex-btn ">
                                     <p class="grid-item date"><span id='checkin'>${product['name']}</span></p>
-                                    <p class="grid-item price"><span id='price'>$${product['price']}</span><span></span></p>
+                                    <p class="grid-item price"><span id='price'>TK ${product['price']}</span><span></span></p>
                                  </div>
                                   </div>                           
                                  </a>
