@@ -17,9 +17,9 @@
         }
 
         $user_name = 'root';
-        $user_password = 'workhard';
+        $user_password = '';
         
-        $conn = mysqli_connect('localhost', $user_name, $user_password,'hotel');
+        $conn = mysqli_connect('localhost', $user_name, $user_password,'airbnb');
         $sql= "select * from products where category='$categoryselect' and p_status<>'Booked' limit $start,$limit";
         $result= mysqli_query($conn,$sql);
     

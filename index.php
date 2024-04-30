@@ -111,7 +111,7 @@ include 'components/wishlist_cart.php';
    </div>
 </section>
 
-<section class="special-packages" style="background: green;margin-bottom: 15px;">
+<section class="special-packages" style="background: #bbcede;margin-bottom: 15px;">
    <h2 class="section-heading">Explore our Special and Comfortable Packages</h2>
    <div class="package-description">
       <p>Experience luxury and comfort like never before with our special packages tailored just for you. Whether you're planning a romantic getaway, a family vacation, or a solo adventure, we have the perfect package to suit your needs. Indulge in exquisite amenities, breathtaking views, and exceptional service as you create memories to last a lifetime.</p>
@@ -595,16 +595,16 @@ let flag=0;
                                 </swiper-slide>
                           </swiper-container >
                           <a href="quick_view.php?pid=${product['id']} "target="_blank" >
-                          <div class="name"><b>${product['city']}, ${product['country']} </b></div>
+                          <div class="name"><b>${product['name']} </b></div>
                              <div class="flex">
                              <div class="card">
                                 <div class="flex-btn title">
-                                <span class='date-title'>Place</span>
+                                <span class='date-title'>Branch</span>
                                 <span class='price-title'>Per 1 Day</span>
                                 </div>    
 
                                 <div class="flex-btn ">
-                                <p class="grid-item date"><span id='checkin'>${product['name']}</span></p>
+                                <p class="grid-item date"><span id='checkin'>${product['address']}</span></p>
                                 <p class="grid-item price"><span id='price'>TK ${product['price']}</span><span></span></p>
                              </div>
                               </div>                           
@@ -930,16 +930,16 @@ let flag=0;
                                     </swiper-slide>
                               </swiper-container >
                               <a href="quick_view.php?pid=${product['id']} " target="_blank" >
-                              <div class="name"><b>${product['city']}, ${product['country']} </b></div>
+                              <div class="name"><b>${product['name']}} </b></div>
                                  <div class="flex">
                                  <div class="card">
                                     <div class="flex-btn title">
-                                    <span class='date-title'>Place</span>
+                                    <span class='date-title'>Branch</span>
                                     <span class='price-title'>Per 1 Day</span>
                                     </div>    
 
                                     <div class="flex-btn ">
-                                    <p class="grid-item date"><span id='checkin'>${product['name']}</span></p>
+                                    <p class="grid-item date"><span id='checkin'>${product['address']}</span></p>
                                     <p class="grid-item price"><span id='price'>TK ${product['price']}</span><span></span></p>
                                  </div>
                                   </div>                           

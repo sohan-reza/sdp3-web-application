@@ -7,9 +7,9 @@
         $max = $_GET['max'];
         
         $user_name = 'root';
-        $user_password = 'workhard';
+        $user_password = '';
         
-        $conn = mysqli_connect('localhost', $user_name, $user_password,'hotel');
+        $conn = mysqli_connect('localhost', $user_name, $user_password,'airbnb');
         $sql= " SELECT p.* FROM products p LEFT JOIN orders o ON p.id = o.pid WHERE  p.category='$categoryselect' and p.price between $min and $max  ";
        
         
