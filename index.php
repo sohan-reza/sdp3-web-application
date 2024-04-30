@@ -27,7 +27,7 @@ include 'components/wishlist_cart.php';
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-   <!-- custom css file link  -->
+
    <link rel="stylesheet" href="css/style.css">
 
    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -54,7 +54,7 @@ include 'components/wishlist_cart.php';
    background-image: url('uploaded_img/background.png'); /* Add the path to your background image */
    background-size: cover;
    background-position: center;
-   height: 100vh; /* Adjust the height as needed */
+   height: 100vh; 
    display: flex;
    justify-content: center;
    align-items: center;
