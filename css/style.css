@@ -1608,13 +1608,13 @@ div.ui-datepicker{
 .products .card .price-title{
   justify-content: end;
   align-items: center;
-  margin-left: 11rem;
+  margin-left: 9rem;
 }
 
 .products .card .grid-item #price{
   justify-content: end;
   align-items: center;
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 
 
