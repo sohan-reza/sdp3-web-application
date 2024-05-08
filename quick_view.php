@@ -64,13 +64,35 @@ include 'components/wishlist_cart.php';
                <img src="uploaded_img/<?= $fetch_product['image_03']; ?>" alt="">
             </div>
          </div>
+
+         <?php
+            $day_count = '1 Day';
+
+            $category = $fetch_product['category'];
+            // Check each option
+            if ($category == "beach") {
+               $day_count = '1 Day';
+            } elseif ($category == "city") {
+               $day_count = '3 Day';
+            } elseif ($category == "camping") {
+               $day_count = '5 Day';
+            } elseif ($category == "hill") {
+               $day_count = '7 Day';
+            } elseif ($category == "forest") {
+               $day_count = '15 Day';
+            } elseif ($category == "boat") {
+               $day_count = '1 Month';
+            }
+         ?>
+         
          <div class="content">
-          
             <div class="flex">
             <div class="name "><?= $fetch_product['name']; ?> </div>
                
                <div class="card">
-                  <p class="title"><span>$</span><span id='price'><?= $fetch_product['price']; ?></span><span> Per Night</span></p>
+                  <p class="title"><span>TK: </span><span id='price'><?= $fetch_product['price']; ?></span><br><span> 
+                  
+                  Per <?=$day_count;?></span></p>
                   </div>
                   
 
@@ -84,16 +106,94 @@ include 'components/wishlist_cart.php';
             <div class="span"><i class="fa-solid fa-restroom"></i><?= $fetch_product['p_bath']; ?> Restroom </div>
            
          </div>
-            <div class="flex-btn check">
+            <!-- <div class="flex-btn check">
             <div class="span " >Check-in <span class="material-symbols-outlined">login</span><input id="checkin" class="checkin"name="checkin" type="text" autocomplete="off"></input> <p id="clear"><i class="fa-solid fa-xmark fa-xl"></i></p> </div>
             <div class="span " >Check-out<span class="material-symbols-outlined">logout</span><input id="checkout" class="checkout" name="checkout" type="text" autocomplete="off"></input>  </div>   
             <script>$( "#checkin" ).datepicker("setDate", new Date("<?php echo $_POST['checkin'] ?>"));</script>
             <script>$( "#checkout" ).datepicker("setDate", new Date("<?php echo $_POST['checkout'] ?>"));</script>
-            </div>
-            <div class="">
-               <div><span id="info" class="info ">Please Provide Checkin & Checkout</span></div>
+            </div> -->
+            <div>
+            <div class="form-check form-check-inline">
+               <input type="checkbox" id="wifi" name="services[]" value="wifi">
+               <label for="wifi">Wi-Fi</label><br>
             </div>
 
+            <div class="form-check form-check-inline">
+               <input type="checkbox" id="breakfast" name="services[]" value="breakfast">
+               <label for="breakfast">Breakfast</label><br>
+            </div>
+
+            <div class="form-check form-check-inline">
+               <input type="checkbox" id="lunch" name="services[]" value="lunch">
+               <label for="lunch">Lunch</label><br>
+            </div>
+            <div class="form-check form-check-inline">
+               <input type="checkbox" id="dinner" name="services[]" value="dinner">
+               <label for="dinner">Dinner</label><br>
+            </div>
+               
+            <div class="form-check form-check-inline">
+               <input type="checkbox" id="fitnessCenter" name="services[]" value="fitness_center">
+               <label for="fitnessCenter">Fitness Center</label><br>
+            </div>
+
+            <div class="form-check form-check-inline">
+               <input type="checkbox" id="swimmingPool" name="services[]" value="swimming_pool">
+               <label for="swimmingPool">Swimming Pool</label><br>
+            </div>
+
+            <div class="form-check form-check-inline">
+               <input type="checkbox" id="roomService" name="services[]" value="room_service">
+               <label for="roomService">Room Service</label><br>
+            </div>
+
+            <div class="form-check form-check-inline">
+               <input type="checkbox" id="parking" name="services[]" value="parking">
+               <label for="parking">Parking</label><br>
+            </div>
+
+            <div class="form-check form-check-inline">
+               <input type="checkbox" id="laundryService" name="services[]" value="laundry_service">
+               <label for="laundryService">Laundry Service</label><br>
+            </div>
+
+            <div class="form-check form-check-inline">
+               <input type="checkbox" id="petFriendly" name="services[]" value="pet_friendly">
+               <label for="petFriendly">Pet-friendly</label><br>
+            </div>
+
+
+            <div class="btn-group">
+  <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" >
+  <label class="btn btn-secondary" for="option1">Checked</label>
+
+  <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+  <label class="btn btn-secondary" for="option2">Radio</label>
+
+  <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" >
+  <label class="btn btn-secondary" for="option3">Disabled</label>
+
+  <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+  <label class="btn btn-secondary" for="option4">Radio</label>
+</div>
+
+
+            </div>
+            <div class="">
+               <div><span id="info" class="info ">Please Select Your Necessary Fascility</span></div>
+            </div>
+            <style>
+               input[type="checkbox"] {
+               transform: scale(1.5); /* Increase the size of the checkbox */
+               margin-right: 10px; /* Add some spacing between the checkbox and label */
+            }
+            
+            label {
+               font-size: 1.2em; /* Increase the font size of the labels */
+               display: table-cell; /* Display labels in a row */
+               margin-bottom: 10px; /* Add some space between rows */
+            }
+            </style>
             <div class="flex-btn ">
             <input type="submit" value="reserve" class="btn" name="add_to_cart"></input>
                <input class="option-btn" type="submit" name="add_to_wishlist" value="add to wishlist">

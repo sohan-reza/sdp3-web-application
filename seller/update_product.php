@@ -35,10 +35,9 @@ if(isset($_POST['update'])){
 
 
 
-   $checkin = $_POST['checkin'];
-   $checkin =  date("d-m-Y",strtotime($checkin));
-   $checkout = $_POST['checkout'];
-   $checkout =  date("d-m-Y",strtotime($checkout));
+  
+   $checkin =  '15-10-2023';
+   $checkout =  '15-10-2023';
 
    $address= $_POST['address'];
    $address=filter_var ($address ,FILTER_SANITIZE_STRING );
@@ -239,17 +238,19 @@ if(isset($_POST['update'])){
           
             <select name="category" value=""> 
                <option value="" >Select</option>
-               <option value="room"<?=$fetch_products['category'] == 'room' ? ' selected="selected"' : '';?>>room</option>
-               <option value="beach"<?=$fetch_products['category'] == 'beach' ? ' selected="selected"' : '';?>>beach</option>
-               <option value="city"<?=$fetch_products['category'] == 'city' ? ' selected="selected"' : '';?>>city</option>
-               <option value="camping"<?=$fetch_products['category'] == 'camping' ? ' selected="selected"' : '';?>>camping</option>
-               <option value="hill"<?=$fetch_products['category'] == 'hill' ? ' selected="selected"' : '';?>>hill</option>
-               <option value="forest"<?=$fetch_products['category'] == 'forest' ? ' selected="selected"' : '';?>>forest</option>
-               <option value="boat"<?=$fetch_products['category'] == 'boat' ? ' selected="selected"' : '';?>>boat</option>
-               <option value="castle"<?=$fetch_products['category'] == 'castle' ? ' selected="selected"' : '';?>>castle</option>
+              
+
+               <!-- <option value="room"<?=$fetch_products['category'] == 'room' ? ' selected="selected"' : '';?>>room</option> -->
+               <option value="beach"<?=$fetch_products['category'] == 'beach' ? ' selected="selected"' : '';?>>1 Day</option>
+               <option value="city"<?=$fetch_products['category'] == 'city' ? ' selected="selected"' : '';?>>3 Day</option>
+               <option value="camping"<?=$fetch_products['category'] == 'camping' ? ' selected="selected"' : '';?>>5 Day</option>
+               <option value="hill"<?=$fetch_products['category'] == 'hill' ? ' selected="selected"' : '';?>>7 Day</option>
+               <option value="forest"<?=$fetch_products['category'] == 'forest' ? ' selected="selected"' : '';?>>15 Day</option>
+               <option value="boat"<?=$fetch_products['category'] == 'boat' ? ' selected="selected"' : '';?>>1 Month</option>
+               <!-- <option value="castle"<?=$fetch_products['category'] == 'castle' ? ' selected="selected"' : '';?>>castle</option>
                <option value="golf"<?=$fetch_products['category'] == 'golf' ? ' selected="selected"' : '';?>>golf</option>
                <option value="apartment"<?=$fetch_products['category'] == 'apartment' ? ' selected="selected"' : '';?>>apartment</option>
-               <option value="tower"<?=$fetch_products['category'] == 'tower' ? ' selected="selected"' : '';?>>tower</option>
+               <option value="tower"<?=$fetch_products['category'] == 'tower' ? ' selected="selected"' : '';?>>tower</option> -->
                </select>
          </div>
 
@@ -257,18 +258,18 @@ if(isset($_POST['update'])){
             $checkin = $fetch_products['p_checkin'];
             $checkin =  date("Y-m-d",strtotime($checkin));
          ?>
-         <div class="inputBox">
+         <!-- <div class="inputBox">
             <span>Check in *</span>
             <input type="date"value="<?=$checkin?>"  class="box"  placeholder="Check-in" name='checkin'>
          </div>
          <?php
-            $checkout = $fetch_products['p_checkout'];
-            $checkout =  date("Y-m-d",strtotime($checkout));
+            //$checkout = $fetch_products['p_checkout'];
+            //$checkout =  date("Y-m-d",strtotime($checkout));
          ?>
          <div class="inputBox">
             <span>Check out *</span>
             <input type="date"value="<?=$checkout?>"  class="box"   placeholder="out" name='checkout'>
-         </div> 
+         </div>  -->
          <div class="inputBox">
             <span>During Guest Stay Facilities*</span>
             <input type="text" class="box"value="<?=$fetch_products['p_facility'];?>" required maxlength="100" placeholder="enter Facilities" name="facility">

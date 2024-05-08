@@ -188,7 +188,7 @@ if(isset($_GET['delete'])){
 
          
             
-            <div class="inputBox place">
+            <!-- <div class="inputBox place">
             <select name='country' class="country" size="1" onchange="loadStates();selectcountry(this);">
             <option value="" selected="selected">-- Select Country --</option>
             </select>
@@ -201,7 +201,7 @@ if(isset($_GET['delete'])){
                <select class="city" size="1" name="city" onchange='selectcity(this);'>
                <option value="" selected="selected">-- Select City --</option>
                </select>
-            </div>
+            </div> -->
 
            
 
@@ -226,7 +226,7 @@ if(isset($_GET['delete'])){
                <option value="city">3 Day</option>
                <option value="camping">5 Day</option>
                <option value="hill">7 Day</option>
-               <option value="forest">15 Month</option>
+               <option value="forest">15 Day</option>
                <option value="boat">1 Month</option>
                <!-- <option value="castle">castle</option>
                <option value="golf">golf</option>
