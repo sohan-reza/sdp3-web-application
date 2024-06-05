@@ -138,6 +138,56 @@ if(!isset($admin_id)){
 
    </div>
 
+<div class="box">
+   <div id="chart"></div>
+</div>
+<script>
+   // JavaScript function to render the chart
+   function renderChart(totalPendings, totalCompletes) {
+      var options = {
+         series: [totalPendings, totalCompletes],
+         labels: ['Pending Orders', 'Completed Orders'],
+         chart: {
+            type: 'donut',
+            height: 350
+         },
+         plotOptions: {
+            pie: {
+               donut: {
+                  labels: {
+                     show: true,
+                     total: {
+                        show: true,
+                        showAlways: true,
+                        label: 'Total',
+                        fontSize: '22px',
+                        fontFamily: 'Helvetica, Arial, sans-serif',
+                        fontWeight: 600,
+                        color: '#373d3f',
+                        formatter: function (w) {
+                           return w.globals.seriesTotals.reduce((a, b) => {
+                              return a + b
+                           }, 0)
+                        }
+                     }
+                  }
+               }
+            }
+         },
+         legend: {
+            position: 'bottom'
+         }
+      };
+
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+      chart.render();
+   }
+
+   // Call the function with data collected from PHP
+   renderChart(<?php echo $total_pendings; ?>, <?php echo $total_completes; ?>);
+</script>
+
+
 </section>
 
 

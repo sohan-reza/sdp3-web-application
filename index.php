@@ -45,7 +45,7 @@ include 'components/wishlist_cart.php';
 <section class="welcome-section">
    <div class="welcome-content">
       <h1>Hello!</h1>
-      <p>Welcome to Super Home.</p>
+      <p>সুপার হোমে আপনাকে স্বাগতম</p>
    </div>
 </section>
 
@@ -112,9 +112,9 @@ include 'components/wishlist_cart.php';
 </section>
 
 <section class="special-packages" style="background: #bbcede;margin-bottom: 15px;">
-   <h2 class="section-heading">Explore our Special and Comfortable Packages</h2>
+   <h2 class="section-heading">আমাদের বিশেষ এবং আরামদায়ক প্যাকেজগুলো ব্যবহার করুন!</h2>
    <div class="package-description">
-      <p>Experience luxury and comfort like never before with our special packages tailored just for you. Whether you're planning a romantic getaway, a family vacation, or a solo adventure, we have the perfect package to suit your needs. Indulge in exquisite amenities, breathtaking views, and exceptional service as you create memories to last a lifetime.</p>
+      <p>আমাদের বিশেষ প্যাকেজ গুলো উপবোগ করুন যেগুলো আপনি আগে কখনও অনুভব করেননি, এমন বিলাসিতা এবং আরাম সহলে অল্প খরচে উপভোগ করুন। আপনি যদি কোন প্রয়োজনে, সাময়িক সময়ের জন্য, একটি পারিবারিক ছুটি, বা একক অভিযানের পরিকল্পনা করে থাকেন, আমাদের কাছে আপনার প্রয়োজনের জন্য উপযুক্ত প্যাকেজ রয়েছে। চমৎকার সুবিধা, মনোমুগ্ধকর দৃশ্য, এবং অসাধারণ সেবা উপভোগ করুন, এখানে আপনি এমন কিছু স্মৃতি তৈরি করবেন যা সারা জীবন স্থায়ী হবে।</p>
    </div>
 </section>
 

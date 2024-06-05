@@ -102,7 +102,7 @@ else if($_POST['payment_status']=='completed')
             Your checkout : '.$fetch_order['checkout'].'<br><br>
 
             
-            Payment: $'.$fetch_order['total_price'].' <br><br>
+            Payment: '.$fetch_order['total_price'].'/- TK <br><br>
             
    
 

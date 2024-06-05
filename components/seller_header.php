@@ -24,7 +24,7 @@ background: 'white'
 
    <section class="flex">
 
-      <a href="../seller/dashboard.php" class="logo">Host<span>Panel</span></a>
+      <a href="../seller/dashboard.php" class="logo">Branch<span>Panel</span></a>
       
 
       <nav class="nav_bar">

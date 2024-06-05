@@ -61,9 +61,9 @@ if(isset($_POST['order'])){
    $address =  $_POST['flat'] .', '. $_POST['city'] .','. $_POST['country'] .' - '. $_POST['pin_code'];
    $address = filter_var($address, FILTER_SANITIZE_STRING);
    $total_price = $_POST['total_price'];
-   $checkin = $_POST['checkin'];
+   $checkin = date("Y-m-d H:i:s");
    $checkin = filter_var($checkin, FILTER_SANITIZE_STRING);
-   $checkout = $_POST['checkout'];
+   $checkout = date("Y-m-d H:i:s");
    $checkout = filter_var($checkout, FILTER_SANITIZE_STRING);
    $payment_name = $_POST['payment_name'];
    $payment_name = filter_var($payment_name, FILTER_SANITIZE_STRING);
@@ -73,10 +73,13 @@ if(isset($_POST['order'])){
    $check_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
    $check_cart->execute([$user_id]);
    $row = $check_cart->fetch(PDO::FETCH_ASSOC);
-
+   error_reporting(E_ALL);
+ini_set('display_errors', 1);
    if($check_cart->rowCount() > 0){
       $seller_id=$row['seller_id'];
-      $insert_order = $conn->prepare("INSERT INTO `orders`(user_id, name, number, email, method, address,  total_price,seller_id,pid,place_name,checkin,checkout,payment_name,cardnumber) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+      $insert_order = $conn->prepare("INSERT INTO `orders`(user_id, `name`, `number`, email, method, `address`,  total_price,seller_id,pid,place_name,checkin,checkout,payment_name,cardnumber) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+      $checkin = null;
+      $checkout = null;
       $insert_order->execute([$user_id, $name, $number, $email, "", $address, $total_price,$seller_id,$pid,$place_name,$checkin,$checkout,$payment_name,$cardnumber]);
 
       $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
@@ -181,14 +184,14 @@ if(isset($_POST['order'])){
       ?>
       <div class="flex">
        <div class="grand-total">Place name: <span><?= $place_name; ?></span></div>
-       <div class="grand-total">Checkin: <span><?= $fetch_cart['checkin']; ?></span></div>
-       <div class="grand-total">Checkout: <span><?= $fetch_cart['checkout']; ?></span></div>
-       <div class="grand-total">Price : <span>$<?= $grand_total; ?></span></div>
+       <!-- <div class="grand-total">Checkin: <span><?= $fetch_cart['checkin']; ?></span></div>
+       <div class="grand-total">Checkout: <span><?= $fetch_cart['checkout']; ?></span></div> -->
+       <div class="grand-total">Price : <span><?= $grand_total; ?>/- TK</span></div>
        </div>
        <input type="hidden" name="pid" value="<?= $fetch_cart['pid']; ?>">
        <input type="hidden" name="place_name" value="<?=  $place_name; ?>">
-       <input type="hidden" name="checkin" value="<?= $fetch_cart['checkin']; ?>">
-       <input type="hidden" name="checkout" value="<?= $fetch_cart['checkout']; ?>">
+       <!-- <input type="hidden" name="checkin" value="<?= $fetch_cart['checkin']; ?>">
+       <input type="hidden" name="checkout" value="<?= $fetch_cart['checkout']; ?>"> -->
       <?php
             }
          }else{

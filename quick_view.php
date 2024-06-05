@@ -112,73 +112,134 @@ include 'components/wishlist_cart.php';
             <script>$( "#checkin" ).datepicker("setDate", new Date("<?php echo $_POST['checkin'] ?>"));</script>
             <script>$( "#checkout" ).datepicker("setDate", new Date("<?php echo $_POST['checkout'] ?>"));</script>
             </div> -->
-            <div>
-            <div class="form-check form-check-inline">
-               <input type="checkbox" id="wifi" name="services[]" value="wifi">
-               <label for="wifi">Wi-Fi</label><br>
-            </div>
+            <div id="extra-feature">
+               <div class="form-check form-check-inline">
+                  <input type="checkbox" id="wifi" name="services[]" value="wifi" checked>
+                  <label for="wifi">Wi-Fi</label><br>
+               </div>
 
-            <div class="form-check form-check-inline">
-               <input type="checkbox" id="breakfast" name="services[]" value="breakfast">
-               <label for="breakfast">Breakfast</label><br>
-            </div>
+               <div class="form-check form-check-inline">
+                  <input type="checkbox" id="breakfast" name="services[]" value="breakfast">
+                  <label for="breakfast">Breakfast</label><br>
+               </div>
 
-            <div class="form-check form-check-inline">
-               <input type="checkbox" id="lunch" name="services[]" value="lunch">
-               <label for="lunch">Lunch</label><br>
-            </div>
-            <div class="form-check form-check-inline">
-               <input type="checkbox" id="dinner" name="services[]" value="dinner">
-               <label for="dinner">Dinner</label><br>
-            </div>
-               
-            <div class="form-check form-check-inline">
-               <input type="checkbox" id="fitnessCenter" name="services[]" value="fitness_center">
-               <label for="fitnessCenter">Fitness Center</label><br>
-            </div>
+               <div class="form-check form-check-inline">
+                  <input type="checkbox" id="lunch" name="services[]" value="lunch">
+                  <label for="lunch">Lunch</label><br>
+               </div>
+               <div class="form-check form-check-inline">
+                  <input type="checkbox" id="dinner" name="services[]" value="dinner">
+                  <label for="dinner">Dinner</label><br>
+               </div>
+                  
+               <div class="form-check form-check-inline">
+                  <input type="checkbox" id="fitnessCenter" name="services[]" value="fitness_center" checked>
+                  <label for="fitnessCenter">Fitness Center</label><br>
+               </div>
 
-            <div class="form-check form-check-inline">
-               <input type="checkbox" id="swimmingPool" name="services[]" value="swimming_pool">
-               <label for="swimmingPool">Swimming Pool</label><br>
-            </div>
+               <div class="form-check form-check-inline">
+                  <input type="checkbox" id="swimmingPool" name="services[]" value="swimming_pool">
+                  <label for="swimmingPool">Swimming Pool</label><br>
+               </div>
 
-            <div class="form-check form-check-inline">
-               <input type="checkbox" id="roomService" name="services[]" value="room_service">
-               <label for="roomService">Room Service</label><br>
-            </div>
+               <div class="form-check form-check-inline">
+                  <input type="checkbox" id="roomService" name="services[]" value="room_service" checked>
+                  <label for="roomService">Room Service</label><br>
+               </div>
 
-            <div class="form-check form-check-inline">
-               <input type="checkbox" id="parking" name="services[]" value="parking">
-               <label for="parking">Parking</label><br>
-            </div>
+               <div class="form-check form-check-inline">
+                  <input type="checkbox" id="parking" name="services[]" value="parking" checked>
+                  <label for="parking">Parking</label><br>
+               </div>
 
-            <div class="form-check form-check-inline">
-               <input type="checkbox" id="laundryService" name="services[]" value="laundry_service">
-               <label for="laundryService">Laundry Service</label><br>
-            </div>
+               <div class="form-check form-check-inline">
+                  <input type="checkbox" id="laundryService" name="services[]" value="laundry_service">
+                  <label for="laundryService">Laundry Service</label><br>
+               </div>
 
-            <div class="form-check form-check-inline">
-               <input type="checkbox" id="petFriendly" name="services[]" value="pet_friendly">
-               <label for="petFriendly">Pet-friendly</label><br>
-            </div>
+               <div class="form-check form-check-inline">
+                  <input type="checkbox" id="petFriendly" name="services[]" value="pet_friendly">
+                  <label for="petFriendly">Pet-friendly</label><br>
+               </div>
 
 
-            <div class="btn-group">
-  <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" >
-  <label class="btn btn-secondary" for="option1">Checked</label>
-
-  <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-  <label class="btn btn-secondary" for="option2">Radio</label>
-
-  <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" >
-  <label class="btn btn-secondary" for="option3">Disabled</label>
-
-  <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-  <label class="btn btn-secondary" for="option4">Radio</label>
-</div>
+            
 
 
             </div>
+
+            <!-- <script>
+            // Get all checkboxes within the div with id "extra-feature"
+            const checkboxes = document.querySelectorAll('#extra-feature input[type="checkbox"]');
+
+            // Add event listener to each checkbox
+            checkboxes.forEach(checkbox => {
+               checkbox.addEventListener('change', function() {
+                     alert(`Checkbox ${this.id} is now ${this.checked ? 'checked' : 'unchecked'}`);
+               });
+            });
+         </script> -->
+
+         <script>
+            document.addEventListener('DOMContentLoaded', function() {
+               const checkboxes = document.querySelectorAll('#extra-feature input[type="checkbox"]');
+               const priceElement = document.getElementById('price');
+               let basePrice = parseFloat(priceElement.textContent);
+
+               checkboxes.forEach(checkbox => {
+                     checkbox.addEventListener('change', function() {
+                        let priceChange = parseFloat(this.dataset.price);
+                        
+                           switch (this.id) {
+                              case 'wifi':
+                                    basePrice += this.checked ? 0 : 0;
+                                    break;
+                              case 'breakfast':
+                                    basePrice += this.checked ? 50 : -50;
+                                    break;
+                              case 'lunch':
+                                    basePrice += this.checked ? 80 : -80;
+                                    break;
+                              case 'dinner':
+                                    basePrice += this.checked ? 60 : -60;
+                                    break;
+                              case 'fitnessCenter':
+                                    basePrice += this.checked ? 0 : 0;
+                                    break;
+                              case 'swimmingPool':
+                                    basePrice += this.checked ? 20 : -20;
+                                    break;
+                              case 'roomService':
+                                    basePrice += this.checked ? 0 : -0;
+                                    break;
+                              case 'parking':
+                                    basePrice += this.checked ? 0 : -0;
+                                    break;
+                              case 'laundryService':
+                                    basePrice += this.checked ? 10 : -10;
+                                    break;
+                              case 'petFriendly':
+                                    basePrice += this.checked ? 20 : -20;
+                                    break;
+                              default:
+                                    break;
+                           }
+                           priceElement.textContent = basePrice.toFixed(2);
+                     });
+               });
+            });
+         </script>
+
+            <style>
+               #extra-feature {
+                  border: 2px solid gray;
+                  padding: 15px;
+                  border-radius: 9px;
+                  padding-bottom: 0;
+                  font-weight: bold;
+               }
+            </style>
+
             <div class="">
                <div><span id="info" class="info ">Please Select Your Necessary Fascility</span></div>
             </div>
@@ -211,8 +272,7 @@ include 'components/wishlist_cart.php';
               <h2>Description</h2>
               <div class="details"><?= $fetch_product['seller_desc']; ?></div>
               <div class="details facility"><span>Facility</span>  <p><?= $fetch_product['p_facility']; ?></p></div>
-              <div class="details language"><span>Language</span>  <p><?= $fetch_product['f_language']; ?> <?= $fetch_product['s_language']; ?></p> </div>
-             
+              
             
     
          </div>
@@ -237,8 +297,128 @@ include 'components/wishlist_cart.php';
                 <span id="send-btn" disabled>Send</span>
             </div>
         </div>
+
+
+        <style>
+         .content.seller {
+   display: flex;
+   flex-direction: column;
+}
+
+.content.seller h3,
+.content.seller h2,
+.content.seller .details,
+.content.seller .flex,
+.content.seller .wrapper_chat {
+   margin-bottom: 20px;
+}
+
+.content.seller .name span {
+   font-weight: bold;
+}
+
+.content.seller .details.facility,
+.content.seller .details.language {
+   margin-top: 10px;
+}
+
+.wrapper_chat .title {
+   font-size: 1.2rem;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+.wrapper_chat .form_chat h3 {
+   font-size: 1.1rem;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+.wrapper_chat .bot-inbox,
+.wrapper_chat .input-data {
+   margin-bottom: 10px;
+}
+
+.wrapper_chat .input-data input {
+   width: calc(100% - 80px);
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+.wrapper_chat #send-btn {
+   display: inline-block;
+   padding: 10px;
+   border-radius: 5px;
+   background-color: #007bff;
+   color: #fff;
+   cursor: pointer;
+}
+
+.wrapper_chat #send-btn:disabled {
+   background-color: #ccc;
+   cursor: not-allowed;
+}
+.wrapper_chat {
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   padding: 15px;
+   background-color: #f9f9f9;
+}
+
+.wrapper_chat .title {
+   font-size: 1.5rem;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+.wrapper_chat .chat-box {
+   max-height: 200px;
+   overflow-y: auto;
+   margin-bottom: 10px;
+}
+
+.wrapper_chat .chat-message {
+   background-color: #e6f2ff;
+   border-radius: 10px;
+   padding: 10px;
+   margin-bottom: 5px;
+}
+
+.wrapper_chat .chat-message .message-header {
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+
+.wrapper_chat .input-field {
+   display: flex;
+   align-items: center;
+}
+
+.wrapper_chat .input-field input {
+   flex: 1;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+.wrapper_chat #send-btn {
+   padding: 10px 20px;
+   border-radius: 20px;
+   background-color: #007bff;
+   color: #fff;
+   cursor: pointer;
+}
+
+.wrapper_chat #send-btn:disabled {
+   background-color: #ccc;
+   cursor: not-allowed;
+}
+
+        </style>
         
     </div>
+
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>

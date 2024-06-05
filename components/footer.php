@@ -2,7 +2,7 @@
    <section class="grid">
       <div class="box">
          <h3>Quick Links</h3>
-         <a href="home.php"><i class="fas fa-angle-right"></i> Home</a>
+         <a href="index.php"><i class="fas fa-angle-right"></i> Home</a>
          <a href="about.php"><i class="fas fa-angle-right"></i> About</a>
          <a href="contact.php"><i class="fas fa-angle-right"></i> Contact</a>
       </div>
@@ -23,6 +23,8 @@
       <div class="box">
          <h3>Admin</h3>
          <a href="admin/admin_login.php" target="_blank"><i class="fa-solid fa-user-tie"></i> Admin login</a>
+         <h3>Branch</h3>
+         <a href="seller/seller_login.php" target="_blank"><i class="fa-solid fa-user-tie"></i> Branch login</a>
       </div>
    </section>
    <div class="credit">Copyright &copy; <?= date('Y'); ?><span> | All Rights Reserved</span></div>

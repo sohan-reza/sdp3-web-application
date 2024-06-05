@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
 
    if($select_user->rowCount() > 0){
       $_SESSION['user_id'] = $row['id'];
-      header('location:home.php');
+      header('location:index.php');
    }else{
       $message[] = 'incorrect username or password!';
       $message_status[]='error';
@@ -61,7 +61,7 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> 
 
 </head>
 <body>
@@ -103,6 +103,104 @@ if(isset($_POST['submit'])){
 <?php include 'components/footer.php'; ?>
 
 <script src="js/script.js"></script>
+<style>
+   /* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  background-image: url('https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.user-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.user-header h1 {
+  margin: 0;
+}
+
+.form-container {
+  width: 400px;
+  margin: 50px auto;
+  
+  padding: 20px;
+  border-radius: 10px;
+ 
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input_container {
+  margin-bottom: 15px;
+}
+
+.input_label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.input_field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* SweetAlert styling */
+.swal2-icon {
+  font-size: 2.5em;
+}
+
+.swal2-close {
+  color: #000;
+}
+
+.swal2-content {
+  color: #000;
+}
+
+</style>
 </body>
 </html>
